@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "953159844691",
+    "project_id": "pfinance-dev",
+    "storage_bucket": "pfinance-dev.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:953159844691:android:0aabb8585d165bf67dd7a6",
+        "android_client_info": {
+          "package_name": "com.example.pfinance"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "953159844691-0brhdqobp0vgbo7v2cjjl915kuno1dmh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCAS1mL1CRIVixbqJomnddF6g2LtagGjUc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "953159844691-0brhdqobp0vgbo7v2cjjl915kuno1dmh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
