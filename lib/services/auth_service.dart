@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_appauth/flutter_appauth.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 class UserState {
   final User? user;
@@ -34,6 +35,17 @@ class AuthService extends Cubit<UserState> {
 
   Future<void> loginAction({final signup = false}) async {
     emit(const UserState(isLoading: true));
+
+    final auth0Token =
+        await appAuth.authorizeAndExchangeCode(AuthorizationTokenRequest(
+      dotenv.env["AUTH0_CLIENT_ID"]!,
+      dotenv.env["AUTH0_REDIRECT_URL"]!,
+      issuer: "https://${dotenv.env["AUTH0_DOMAIN"]}",
+      scopes: ["openid", "profile", "offline_access", "email"],
+      promptValues: ["login"],
+    ));
+
+    auth0Token.accessToken
   }
 
   Future<void> logoutAction() async {
